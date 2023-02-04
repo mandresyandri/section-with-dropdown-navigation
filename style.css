@@ -125,10 +125,14 @@ h2, p, .learn-more-button {
     left: 15%;
 }
 
-h2 {
+.desktop-title {
     color: var(--almost-black);
     font-size: 80px;
     width: 600px;
+}
+
+.mobile-title {
+    display: none;
 }
 
 p {
@@ -199,7 +203,7 @@ p {
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
     nav {
         display: none;
     }
@@ -210,9 +214,32 @@ p {
 
     .img-hero-mobile {
         display: block;
+        width: 750px;
+        height: 564px;
     }
 
     section {
         flex-direction: column-reverse;
+    }
+
+    .desktop-title {
+        display: none;
+    }
+
+    .mobile-title {
+        text-align: center;
+        display: block;
+        font-size: 60px;
+        width: 600px;
+        color: var(--almost-black);
+    }
+
+    p {
+        text-align: center;
+        width: 300px;
+    }
+
+    .attribution {
+        display: none;
     }
 }
