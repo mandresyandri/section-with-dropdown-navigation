@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+
+body {
+    margin: 20px;
+    padding: 0px;
+    font-size: 18px;
+    font-family: Epilogue, sans-serif;
+    background-color: var(--almost-white);
+    color: var(--medium-gray)
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.left-side-menu {
+    display: flex;
+}
+
+.dropdown-features {
+    display: block;
+    background-color: white;
+    border-radius: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    top: 3px;
+    left: -10px;
+    width: 132px;
+}
+
+.dropdown-features > li {
+    position: relative;
+    right: 20%;
+}
+
+.dropdown-compagny {
+    display: none;
+}
+
+.dropdown-menu-hover-one:hover .dropdown-features {
+    display: block;
+}
+
+.right-side-menu {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+.register {
+    border: solid ;
+    width: auto;
+    padding: 8px;
+    transform: translateY(-10px);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* CSS from frontend mentor */ 
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
