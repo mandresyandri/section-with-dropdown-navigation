@@ -19,35 +19,64 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    
 }
 
 .left-side-menu {
     display: flex;
 }
 
-.dropdown-features {
-    display: block;
-    background-color: white;
-    border-radius: 12px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: relative;
-    top: 3px;
-    left: -10px;
-    width: 132px;
+.toogle {
+    display: inline-block;
+    transform: rotate(269deg);
+    font-weight: bold;
 }
 
-.dropdown-features > li {
-    position: relative;
-    right: 20%;
+.dropdown-features {
+    display: none;
+    background-color: white;
+    border-radius: 12px;
+    padding: 17px;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    width: 150px;
+    box-shadow: 0px 0px 9px 1px var(--medium-gray);
+    line-height: 1.8;
+    z-index: 100;
 }
 
 .dropdown-compagny {
     display: none;
+    background-color: white;
+    border-radius: 12px;
+    padding: 17px;
+    position: absolute;
+    top: 60px;
+    left: 190px;
+    width: 120px;
+    z-index: 100;
+    box-shadow: 0px 0px 9px 1px var(--medium-gray);
+    line-height: 1.8;
+}
+
+.dropdown-features > li {
+    position: relative;
+    right: 10%;
+    top: 10%;
+}
+
+.dropdown-compagny > li {
+    position: relative;
+    right: 15%;
+    top: 10%
 }
 
 .dropdown-menu-hover-one:hover .dropdown-features {
+    display: block;
+}
+
+.dropdown-menu-hover-two:hover .dropdown-compagny {
     display: block;
 }
 
@@ -60,17 +89,87 @@ li {
     margin-left: 30px;
 }
 
+li:hover {
+    color: var(--almost-black);
+    cursor: pointer;
+}
+
 .register {
     border: solid ;
     width: auto;
+    height: 18px;
     padding: 8px;
     transform: translateY(-10px);
     border-radius: 12px;
     padding: 10px;
 }
 
+
+/* Main content */ 
+section {
+    display: flex;
+}
+
+.left-content {
+    position: relative;
+    top: 50px;
+    width: calc(70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h2, p, .learn-more-button {
+    position: relative;
+    top: 10px;
+    left: 15%;
+}
+
+h2 {
+    color: var(--almost-black);
+    font-size: 80px;
+    width: 600px;
+}
+
+p {
+    width: 450px;
+    line-height: 1.6;
+}
+
+.learn-more-button {
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    padding: 10px;
+    width: 160px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.learn-more-button:hover {
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+}
+
+.right-content {
+    width: calc(50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-hero-desktop {
+    position: relative;
+    top: 70px;
+    right: 30px;
+    width: calc(960px/2.1);  
+    height: calc(1280px/2.2); 
+}
+
 /* CSS from frontend mentor */ 
 .attribution { 
+    display: none;
     font-size: 11px; 
     text-align: center; 
 }
