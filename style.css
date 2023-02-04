@@ -137,6 +137,7 @@ p {
 }
 
 .learn-more-button {
+    margin-top: 20px;
     background-color: var(--almost-black);
     color: var(--almost-white);
     padding: 10px;
@@ -151,6 +152,7 @@ p {
 .learn-more-button:hover {
     background-color: var(--almost-white);
     color: var(--almost-black);
+    cursor: pointer;
 }
 
 .right-content {
@@ -160,6 +162,7 @@ p {
 }
 
 .img-hero-desktop {
+    display: block;
     position: relative;
     top: 70px;
     right: 30px;
@@ -167,12 +170,49 @@ p {
     height: calc(1280px/2.2); 
 }
 
+.img-hero-mobile {
+    display: none;
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    width: 550px;
+    position: relative;
+    top: 50px;
+    left: 15%;
+}
+
 /* CSS from frontend mentor */ 
 .attribution { 
-    display: none;
+    position: absolute;
+    top: 98%;
+    left: 35%;
+    right: 75%;
+    width: 500px;
+    display: block;
     font-size: 11px; 
     text-align: center; 
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 350px) {
+    nav {
+        display: none;
+    }
+
+    .img-hero-desktop {
+        display: none;
+    }
+
+    .img-hero-mobile {
+        display: block;
+    }
+
+    section {
+        flex-direction: column-reverse;
+    }
 }
