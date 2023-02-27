@@ -218,6 +218,13 @@ p {
         justify-content: space-between;
     }
 
+    .mobile-menu {
+        width: 60%;
+        height: 100%;
+        background-color: var(--almost-white);
+        border: solid;
+    }
+
     .img-hero-desktop {
         display: none;
     }
