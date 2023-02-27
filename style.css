@@ -16,10 +16,14 @@ body {
     color: var(--medium-gray)
 }
 
-nav {
+.desktop-nav {
     display: flex;
     justify-content: space-between;
-    
+
+}
+
+.mobile-nav {
+    display: none;
 }
 
 .left-side-menu {
@@ -105,7 +109,7 @@ li:hover {
 }
 
 
-/* Main content */ 
+/* Main content */
 section {
     display: flex;
 }
@@ -170,8 +174,8 @@ p {
     position: relative;
     top: 70px;
     right: 30px;
-    width: calc(960px/2.1);  
-    height: calc(1280px/2.2); 
+    width: calc(960px/2.4);
+    height: calc(1280px/2.4);
 }
 
 .img-hero-mobile {
@@ -184,28 +188,34 @@ p {
     justify-self: center;
     width: 550px;
     position: relative;
-    top: 50px;
+    top: 20px;
     left: 15%;
 }
 
-/* CSS from frontend mentor */ 
-.attribution { 
+/* CSS from frontend mentor */
+.attribution {
     position: absolute;
     top: 98%;
     left: 35%;
     right: 75%;
     width: 500px;
     display: block;
-    font-size: 11px; 
-    text-align: center; 
+    font-size: 11px;
+    text-align: center;
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 @media screen and (max-width: 450px) {
-    nav {
+    .desktop-nav {
         display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        margin-bottom: 15px;
+        justify-content: space-between;
     }
 
     .img-hero-desktop {
@@ -214,8 +224,8 @@ p {
 
     .img-hero-mobile {
         display: block;
-        width: 750px;
-        height: 564px;
+        width: 350px;
+        height: 264px;
     }
 
     section {
@@ -229,14 +239,40 @@ p {
     .mobile-title {
         text-align: center;
         display: block;
-        font-size: 60px;
-        width: 600px;
+        font-size: 35px;
+        width: 350px;
         color: var(--almost-black);
+    }
+
+    h2, p, .learn-more-button {
+        left: 0px;
+        text-align: center;
     }
 
     p {
         text-align: center;
-        width: 300px;
+        width: 350px;
+    }
+
+    .learn-more-button {
+        position: relative;
+        top: 0px;
+        left: 40%;
+    }
+
+    .bottom-content {
+        display: flex;
+        justify-content: space-between;
+        justify-self: center;
+        width: 370px;
+        position: relative;
+        top: 30px;
+        left: 0%;
+    }
+
+    .bottom-content > svg {
+        width: auto;
+        height: auto;
     }
 
     .attribution {
